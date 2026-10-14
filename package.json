@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "scopelock-ai",
-  "title": "ScopeLock AI - B2B Scope Creep & Change Orders",
-  "description": "Autonomous scope creep auditor and statutory UCC \u00a7 2-209 legal change order generator for freelance developers and software agencies.",
+  "title": "ScopeLock AI",
+  "description": "Autonomous scope creep auditor and statutory UCC § 2-209 legal change order generator for freelancers and software agencies.",
   "icon": "icon.png",
   "author": "ahirwardhanmanti83-bit",
   "categories": [
@@ -13,22 +13,41 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "generate-change-order",
-      "title": "Generate Legal Change Order",
-      "description": "Instant statutory UCC \u00a7 2-209 change order notice for client scope creep",
-      "mode": "view"
-    },
-    {
       "name": "audit-scope-exposure",
       "title": "Calculate Scope Creep Exposure",
       "description": "Calculate unpaid client feature bleed and invoice amount",
       "mode": "view"
     },
     {
+      "name": "generate-change-order",
+      "title": "Generate Legal Change Order",
+      "description": "Instant statutory UCC § 2-209 change order notice for client scope creep",
+      "mode": "view"
+    },
+    {
       "name": "copy-ucc2209-notice",
-      "title": "Quick Copy UCC \u00a7 2-209 Notice",
+      "title": "Quick Copy UCC § 2-209 Notice",
       "description": "Copy legal non-waivable demand clause directly to clipboard",
       "mode": "no-view"
     }
-  ]
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.80.0",
+    "@raycast/utils": "^1.16.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
 }
